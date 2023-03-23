@@ -1,5 +1,5 @@
 <?php
-	$StudentId = $_POST['StudentId'];
+	$StudentId = $_POST['StudentID'];
 	$Password = $_POST['Password'];
 	// Database connection
 	$conn = new mysqli('localhost','root','','StudentInfo');
@@ -8,26 +8,19 @@
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 		
-		$q = "select studentId,password from registration";
-		
-		$r = mysqli_query($conn,$q);
-		$flag = 0;
-		while($row = mysqli_fetch_assoc($r))
-		{
-			if($row["studentId"] == $StudentId && $row["password"] == $Password)
-			{
-				echo "login successful!!";
-				flag = 1;
-				require_once("google.com");
-			}
-			
+		$StudentId = mysqli_real_escape_string($conn,$StudentId);
+		$Password = mysqli_real_escape_string($conn,$Password);
+		$query = "SELECT * FROM registration WHERE studentId='$StudentId' AND password='$Password'";
+		$result = mysqli_query($conn,$query);
+
+		if(mysqli_num_rows($result) > 0) {
+			// User credentials are correct, redirect to dashboard or homepage
+			echo "Login Successful!!";
+			exit;
+		} else {
+			// User credentials are incorrect, display an error message
+			echo "Invalid student Id or password!!";
 		}
-		if(flag == 0)
-		{
-			echo "incorrect credentials. try again";
-		}
-		
-		$stmt->close();
 		$conn->close();
 	}
 ?>
