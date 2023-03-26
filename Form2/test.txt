@@ -1,0 +1,7 @@
+'Computer Science and Engineering','Physics','Chemistry','Mathematics','Statistics','Environmental Science','Geological Science'
+
+'2016-17','2017-18','2018-19','2019-20','2020-21','2021-22','2022-23'
+
+'Male','Female','Others'
+
+'Mir Mosharraf Hossain Hall','Shaheed Salam-Barkat Hall','Bangabandhu Sheikh Mujibur Rahman Hall','Al Beruni Hall','Shaheed Rafiq-Jabbar Hall','A F M Kamaluddin Hall','Mowlana Bhashani Hall','Bishwakabi Rabindranath Tagore Hall','Jahanara Imam Hall','Nawab Faizunnesa Hall','Pritilata Hall','Fazilatunnesa Hall','Begum Khaleda Zia Hall','Sheikh Hasina Hall','Bangamata Begum Fazilatunnessa Mujib Hall','Begum Sufia Kamal Hall','21st Boys'' Hall','18th Girls'' Hall'
